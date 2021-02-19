@@ -48,7 +48,7 @@ class Controller extends BlockController
 	
 	public function save($args) 
 	{
-		$args['do_crop'] = ($args['do_crop']) ? true : false;
+        $args['do_crop'] = ($args['do_crop']) ? 1 : 0;
 		
 		// Due to a bug in the core, we can't save null values yet...
 		$args['max_width'] = (!empty($args['max_width'])) ? $args['max_width'] : 0;

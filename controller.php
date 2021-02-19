@@ -11,7 +11,7 @@ class Controller extends Package
 {
 	protected $pkgHandle = 'd3_random_image';
 	protected $appVersionRequired = '5.7.1';
-	protected $pkgVersion = '1.0';
+	protected $pkgVersion = '1.0.1';
 	
 	public function getPackageName() 
 	{
