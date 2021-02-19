@@ -1,20 +1,23 @@
-<?php 
-defined('C5_EXECUTE') or die("Access Denied.");
+<?php
 
-$form  = Core::make('helper/form');
+defined('C5_EXECUTE') or die('Access Denied.');
+
+use Concrete\Core\Support\Facade\Application;
+
+$form  = Application::getFacadeApplication()->make('helper/form');
+
+/** @var array $fileSetOptions*/
 ?>
 
 <div class="form-group">
-	<?php 
-	$file_set_options = $controller->getFileSetsOptions();
-	
-    if (count($file_set_options) > 0) {
+	<?php
+    if (count($fileSetOptions) > 0) {
 		echo $form->label('fsID', t('Choose a file set'));
 		?>
 	
 		<div class="input">
 			<?php 
-			echo $form->select('fsID', $file_set_options, $fsID);
+			echo $form->select('fsID', $fileSetOptions, $fsID);
 			?>
 		</div>
 		<?php 
@@ -53,7 +56,7 @@ $form  = Core::make('helper/form');
 		?>
 		
 		<?php 
-		echo t("Force image dimensions (crop)");
+		echo t('Force image dimensions (crop)');
 		?>
 	</label>
 </div>

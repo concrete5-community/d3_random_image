@@ -1,4 +1,10 @@
-<?php  defined('C5_EXECUTE') or die("Access Denied."); ?>
+<?php
+
+defined('C5_EXECUTE') or die('Access Denied.');
+
+/** @var string $error */
+/** @var string $imagePath */
+?>
 
 <div class="d3-random-image">
 	<?php 
@@ -6,7 +12,7 @@
 		echo $error;
 	} else {
 		?>
-		<img src="<?php  echo $imagePath ?>" />
+		<img src="<?php echo $imagePath ?>" />
 		<?php 
 	}
 	?>
